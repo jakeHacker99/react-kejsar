@@ -3,20 +3,20 @@ import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectRecommend } from "../features/movie/movieSlice";
+import { selectRecommend } from "../features/vape/vapeSlice";
 
 const Recomends = (props) => {
-  const movies = useSelector(selectRecommend);
+  const vapes = useSelector(selectRecommend);
 
   return (
     <Container>
       <h4>bästsäljare</h4>
       <Content>
-        {movies &&
-          movies.map((movie, key) => (
+        {vapes &&
+          vapes.map((vape, key) => (
             <Wrap key={key}>
-              <Link to={"/detail/" + movie.id}>
-                <img src={movie.cardImg} alt={movie.title} />
+              <Link to={"/detail/" + vape.id}>
+                <img src={vape.cardImg} alt={vape.title} />
               </Link>
             </Wrap>
           ))}

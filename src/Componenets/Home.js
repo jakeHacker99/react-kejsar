@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import db from "../Firebase";
-import { setMovies } from "../features/movie/movieSlice";
+import { setMovies } from "../features/vape/vapeSlice";
 import { selectUserName } from "../features/user/userSlice";
 
 const Home = (props) => {
@@ -21,7 +21,7 @@ const Home = (props) => {
   let trending = [];
 
   useEffect(() => {
-    db.collection("movies").onSnapshot((snapshot) => {
+    db.collection("vapes").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
         switch (doc.data().type) {
           case "recommend":

@@ -1,11 +1,11 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import userReducer from "../features/user/userSlice";
-import movieReducer from "../features/movie/movieSlice";
+import vapeSlice from "../features/vape/vapeSlice";
 
 export default configureStore({
   reducer: {
     user: userReducer,
-    movie: movieReducer,
+    vape: vapeSlice,
   },
   middleware: getDefaultMiddleware({
     serializableCheck: false,

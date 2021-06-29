@@ -7,8 +7,8 @@ const initialState = {
   trending: null,
 };
 
-const movieSlice = createSlice({
-  name: "movie",
+const vapeSlice = createSlice({
+  name: "vape",
   initialState,
   reducers: {
     setMovies: (state, action) => {
@@ -20,11 +20,11 @@ const movieSlice = createSlice({
   },
 });
 
-export const { setMovies } = movieSlice.actions;
+export const { setMovies } = vapeSlice.actions;
 
-export const selectRecommend = (state) => state.movie.recommend;
-export const selectNewDisney = (state) => state.movie.newDisney;
-export const selectOriginal = (state) => state.movie.original;
-export const selectTrending = (state) => state.movie.trending;
+export const selectRecommend = (state) => state.vape.recommend;
+export const selectNewDisney = (state) => state.vape.newDisney;
+export const selectOriginal = (state) => state.vape.original;
+export const selectTrending = (state) => state.vape.trending;
 
-export default movieSlice.reducer;
+export default vapeSlice.reducer;

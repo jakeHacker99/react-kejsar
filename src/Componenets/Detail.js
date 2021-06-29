@@ -22,7 +22,7 @@ const Detail = (props) => {
   };
 
   useEffect(() => {
-    db.collection("movies")
+    db.collection("vapes")
       .doc(id)
       .get()
       .then((doc) => {
