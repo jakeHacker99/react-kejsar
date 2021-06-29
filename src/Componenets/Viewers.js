@@ -12,7 +12,10 @@ const Viewers = (props) => {
           <a
             href="/"
             onClick={() =>
-              window.open("https://vapeaims.blogspot.com/", "_blank")
+              window.open(
+                "https://vapeaims.blogspot.com/2020/12/vilka-ar-vi-vad-kan-forvantas.html",
+                "_blank"
+              )
             }
           >
             <BookIcon className="icon" />

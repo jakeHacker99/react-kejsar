@@ -133,24 +133,6 @@ const CTALogoOne = styled.img`
   width: 100%;
 `;
 
-const SignUp = styled.a`
-  font-weight: bold;
-  color: #f9f9f9;
-  background-color: #0063e5;
-  margin-bottom: 12px;
-  width: 100%;
-  letter-spacing: 1.5px;
-  font-size: 28px;
-  padding: 16.5px 0;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0483ee;
-  }
-`;
-
 const Google = styled.button`
   display: block;
   margin-left: auto;
@@ -181,7 +163,6 @@ const Google = styled.button`
 `;
 
 const Form = styled.div`
-  margin-top: 100px;
   width: 408px;
   @media (max-width: 768px) {
     margin-top: 20px;
