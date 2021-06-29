@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectNewDisney } from "../features/vape/vapeSlice";
 
-const NewDisney = (props) => {
+const Tillbehör = (props) => {
   const vapes = useSelector(selectNewDisney);
   return (
     <Container>
@@ -68,4 +68,4 @@ const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
   }
 `;
-export default NewDisney;
+export default Tillbehör;

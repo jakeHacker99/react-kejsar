@@ -4,7 +4,7 @@ import React from "react";
 import ImgSlider from "./ImgSlider";
 import Viewers from "./Viewers";
 import Recomends from "./Recomends";
-import NewDisney from "./NewDisney";
+import Tillbehör from "./Tillbehör";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -62,7 +62,7 @@ const Home = (props) => {
       <ImgSlider />
       <Viewers />
       <Recomends />
-      <NewDisney />
+      <Tillbehör />
     </Container>
   );
 };
