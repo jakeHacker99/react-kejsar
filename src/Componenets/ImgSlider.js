@@ -17,7 +17,14 @@ const ImgSlider = () => {
   return (
     <Carousel {...settings}>
       <Wrap>
-        <a>
+        <a
+          onClick={() =>
+            window.open(
+              ` https://www.youtube.com/watch?v=rVm1CwozfpQ`,
+              "_blank"
+            )
+          }
+        >
           <img src="/images/ghost.jpg" alt="" />
         </a>
       </Wrap>

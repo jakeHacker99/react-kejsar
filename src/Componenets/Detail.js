@@ -7,6 +7,8 @@ import db from "../Firebase";
 import { useEffect } from "react";
 import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
+import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
+import YouTubeIcon from "@material-ui/icons/YouTube";
 const Detail = (props) => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
@@ -67,13 +69,23 @@ const Detail = (props) => {
           </AddList>
           {!detailData.tillbehör ? (
             <Player onClick={() => window.open(myLink, "_blank")}>
-              <img src="/images/play-icon-black.png" alt="" />
+              <YouTubeIcon />
               <span>Youtube</span>
             </Player>
           ) : (
             <h2></h2>
           )}
         </Controls>
+
+        <a
+          onClick={() =>
+            window.open("https://www.snapchat.com/add/Vapeaims", "_blank")
+          }
+        >
+          <AddToHomeScreenIcon
+            style={{ marginLeft: "35%", fontSize: "25", cursor: "pointer" }}
+          />
+        </a>
         <a
           onClick={() =>
             window.open(
@@ -83,7 +95,7 @@ const Detail = (props) => {
           }
         >
           <AddCircleIcon
-            style={{ marginLeft: "44%", fontSize: "35", cursor: "pointer" }}
+            style={{ marginLeft: "40px", fontSize: "25", cursor: "pointer" }}
           />
         </a>
       </Box>
@@ -171,7 +183,7 @@ const AddList = styled.div`
   border: 2px solid white;
   cursor: pointer;
   span {
-    background-color: rgb(249, 249, 249);
+    color: #fff;
     display: inline-block;
     &:first-child {
       height: 2px;
