@@ -60,7 +60,7 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="/images/hd-logo.png" alt="aims" />
+        <img src="/images/logo.ico" style={{ width: "30px" }} />
       </Logo>
 
       {!userName ? (
@@ -68,13 +68,13 @@ const Header = (props) => {
       ) : (
         <>
           <NavMenu>
-            <a href="/home">
+            <a>
               <img src="/images/home-icon.svg" alt="HOME" />
-              <span>Home</span>
+              <span>Hem</span>
             </a>
-            <a href="/">
+            <a>
               <img src="/images/search-icon.svg" alt="SEARCH" />
-              <span>Search</span>
+              <span>Sök</span>
             </a>
           </NavMenu>
           <SignOut>
