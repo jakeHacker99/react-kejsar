@@ -9,6 +9,7 @@ import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+
 const Detail = (props) => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
@@ -43,14 +44,26 @@ const Detail = (props) => {
   return (
     <Container style={imageStyling}>
       <Box>
-        <ProductBox> {detailData.title} </ProductBox>
-        <ProductBox>{detailData.pris1}</ProductBox>
-        <ProductBox>{detailData.pris3}</ProductBox>
-        <ProductBox>frakt</ProductBox>
-        <ShipBox>
-          brevlåda: {detailData.brevlåda} butik: {detailData.butik}
-        </ShipBox>
-        {!detailData.tillbehör ? (
+        {!detailData.beställningvara ? (
+          <>
+            <ProductBox> {detailData.title} </ProductBox>
+            <ProductBox>{detailData.pris1}</ProductBox>
+            <ProductBox>{detailData.pris3}</ProductBox>
+            <ProductBox>frakt</ProductBox>
+            <ShipBox>
+              brevlåda: {detailData.brevlåda} butik: {detailData.butik}
+            </ShipBox>
+          </>
+        ) : (
+          <>
+            <ProductBox> {detailData.title} </ProductBox>
+            <ProductBox>{detailData.pris1}</ProductBox>
+            <ProductBox>frakt</ProductBox>
+            <ShipBox> {detailData.fraktInfo}</ShipBox>
+          </>
+        )}
+
+        {!detailData.tillbehör && !detailData.beställningvara ? (
           <>
             <SubTitle>
               Ingår alltiid 10ml valfri smak till din {detailData.title}
@@ -67,7 +80,7 @@ const Detail = (props) => {
               <ArrowBackOutlinedIcon />
             </Link>
           </AddList>
-          {!detailData.tillbehör ? (
+          {!detailData.tillbehör && !detailData.beställningvara ? (
             <Player onClick={() => window.open(myLink, "_blank")}>
               <YouTubeIcon />
               <span>Youtube</span>
@@ -77,27 +90,56 @@ const Detail = (props) => {
           )}
         </Controls>
 
-        <a
-          onClick={() =>
-            window.open("https://www.snapchat.com/add/Vapeaims", "_blank")
-          }
-        >
-          <AddToHomeScreenIcon
-            style={{ marginLeft: "35%", fontSize: "25", cursor: "pointer" }}
-          />
-        </a>
-        <a
-          onClick={() =>
-            window.open(
-              `https://wa.me/+46700237630?text=tja%20jag%20vill%20beställa%20en%20${detailData.title.toLowerCase()}%20`,
-              "_blank"
-            )
-          }
-        >
-          <AddCircleIcon
-            style={{ marginLeft: "40px", fontSize: "25", cursor: "pointer" }}
-          />
-        </a>
+        {!detailData.beställningvara ? (
+          <>
+            <a
+              onClick={() =>
+                window.open("https://www.snapchat.com/add/Vapeaims", "_blank")
+              }
+            >
+              <AddToHomeScreenIcon
+                style={{ marginLeft: "35%", fontSize: "25", cursor: "pointer" }}
+              />
+            </a>
+            <a
+              onClick={() =>
+                window.open(
+                  `https://wa.me/+46700237630?text=tja%20jag%20vill%20beställa%20en%20${detailData.title.toLowerCase()}%20`,
+                  "_blank"
+                )
+              }
+            >
+              <AddCircleIcon
+                style={{
+                  marginLeft: "40px",
+                  fontSize: "25",
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+          </>
+        ) : (
+          <>
+            <a
+              onClick={() =>
+                window.open(
+                  `https://docs.google.com/forms/d/e/1FAIpQLSflgCfoHM9f71TP40IAGDR6t201IKtnpX_w6og0Zw7oQkPmVA/viewform?vc=0&c=0&w=1&flr=0`,
+                  "_blank"
+                )
+              }
+            >
+              <AddCircleIcon
+                style={{
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  fontSize: "25",
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+          </>
+        )}
       </Box>
     </Container>
   );

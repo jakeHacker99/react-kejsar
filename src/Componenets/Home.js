@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import db from "../Firebase";
 import { setMovies } from "../features/vape/vapeSlice";
 import { selectUserName } from "../features/user/userSlice";
+import Preorders from "./Preorders";
 
 const Home = (props) => {
   const dispatch = useDispatch();
@@ -61,6 +62,7 @@ const Home = (props) => {
     <Container>
       <ImgSlider />
       <Viewers />
+      <Preorders />
       <Recomends />
       <Tillbehör />
     </Container>
