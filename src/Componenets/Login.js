@@ -65,6 +65,10 @@ const Login = (props) => {
       })
     );
   };
+
+  const handleGuest = () => {
+    history.push("/home");
+  };
   return (
     <Container style={imageStyling}>
       <CTA>
@@ -74,6 +78,7 @@ const Login = (props) => {
             <img src="./images/google.svg" alt="" />
             Logga in med Google
           </Google>
+          <Guest onClick={handleGuest}>Forsätt som gäst</Guest>
         </Form>
       </CTA>
       <BgImage />
@@ -155,6 +160,34 @@ const Google = styled.button`
   &:hover {
     background-color: rgba(207, 207, 207, 025);
     color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+  img {
+    background-color: #fff;
+  }
+`;
+const Guest = styled.button`
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: #4b0082;
+  align-items: center;
+  color: #fff;
+  height: 56px;
+  width: 70%;
+  border-radius: 28px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%),
+    inset 0 0 0 2px rgb(0 0 0 / 0%) inset 0 0 0 1px rgb(0 0 0 / 0);
+  vertical-align: middle;
+  z-index: 0;
+  transition-duration: 167ms;
+  font-size: 20px;
+  background-color: #4b0082;
+
+  &:hover {
+    background-color: rgba(75, 0, 130, 0.8);
     cursor: pointer;
   }
   img {
