@@ -97,23 +97,11 @@ const Detail = (props) => {
                 window.open("https://www.snapchat.com/add/Vapeaims", "_blank")
               }
             >
-              <AddToHomeScreenIcon
-                style={{ marginLeft: "35%", fontSize: "25", cursor: "pointer" }}
-              />
-            </a>
-            <a
-              onClick={() =>
-                window.open(
-                  `https://wa.me/+46700237630?text=tja%20jag%20vill%20beställa%20en%20${detailData.title.toLowerCase()}%20`,
-                  "_blank"
-                )
-              }
-            >
               <AddCircleIcon
                 style={{
-                  marginLeft: "40px",
-                  fontSize: "25",
-                  cursor: "pointer",
+                  display: "block",
+                  marginLeft: "45%",
+                  marginRight: "50%",
                 }}
               />
             </a>

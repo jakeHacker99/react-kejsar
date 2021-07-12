@@ -29,7 +29,14 @@ const ImgSlider = () => {
         </a>
       </Wrap>
       <Wrap>
-        <a>
+        <a
+          onClick={() =>
+            window.open(
+              `https://wa.me/+46700237630?text=tja%20jag%20vill%20handla`,
+              "_blank"
+            )
+          }
+        >
           <img src="/images/hd-logo.png" alt="" />
         </a>
       </Wrap>
