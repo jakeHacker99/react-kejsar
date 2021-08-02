@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import {
+  getData4Accesories,
+  getData4New,
+  getData4Preorders,
+} from "../../backend";
+
 const initialState = {
   recommend: null,
   newDisney: null,
@@ -22,9 +28,8 @@ const vapeSlice = createSlice({
 
 export const { setMovies } = vapeSlice.actions;
 
-export const selectRecommend = (state) => state.vape.recommend;
-export const selectNewDisney = (state) => state.vape.newDisney;
-export const selectOriginal = (state) => state.vape.original;
-export const selectTrending = (state) => state.vape.trending;
+export const selectRecommend = () => getData4New();
+export const selectNewDisney = () => getData4Accesories();
+export const selectOriginal = () => getData4Preorders();
 
 export default vapeSlice.reducer;

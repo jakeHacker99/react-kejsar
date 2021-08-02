@@ -3,16 +3,18 @@ import styled from "styled-components";
 import React from "react";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import db from "../Firebase";
 import { useEffect } from "react";
 import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import { findById } from "../backend";
 
 const Detail = (props) => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
+  const currentId = window.location.href.slice(-1);
+
   const myLink = detailData.demoLink;
   const card = JSON.stringify(detailData.cardImg);
 
@@ -25,21 +27,9 @@ const Detail = (props) => {
   };
 
   useEffect(() => {
-    db.collection("vapes")
-      .doc(id)
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          setDetailData(doc.data());
-          window.scrollTo(0, 0);
-        } else {
-          console.log("no such doc in firebase 🔥");
-        }
-      })
-      .catch((err) => {
-        console.log("err: ", err.message);
-      });
-  }, [id]);
+    const currentData = findById(currentId);
+    setDetailData(currentData);
+  }, []);
 
   return (
     <Container style={imageStyling}>
