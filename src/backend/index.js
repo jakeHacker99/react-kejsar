@@ -42,7 +42,6 @@ export const getData4New = () => {
       cardImg:
         "https://420toursfarm.com/wp-content/uploads/2019/05/Buy-EGO-CE4-Vape-Pen.jpg",
       pris1: "199:-",
-      tilbehör: true,
       title: "Ecigg-kit",
       type: "new",
       demoLink: "https://www.youtube.com/watch?v=jy6xbPITauM",
@@ -146,7 +145,6 @@ export const getAllData = () => {
       cardImg:
         "https://420toursfarm.com/wp-content/uploads/2019/05/Buy-EGO-CE4-Vape-Pen.jpg",
       pris1: "199:-",
-      tillbehör: true,
       title: "Ecigg-kit",
       type: "new",
       demoLink: "https://www.youtube.com/watch?v=jy6xbPITauM",
