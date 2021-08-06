@@ -9,7 +9,7 @@ const Tillbehör = (props) => {
   const vapes = useSelector(selectNewDisney);
   return (
     <Container>
-      <h4>Du kanske gillar</h4>
+      <h4>du kanske gillar</h4>
       <Content>
         {vapes &&
           vapes.map((vape, key) => (

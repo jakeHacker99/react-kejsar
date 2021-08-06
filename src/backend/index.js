@@ -4,7 +4,8 @@ export const getData4Preorders = () => {
       id: 6,
       beställningsvara: true,
       fraktInfo: "varan får du inom 5-12 dagar till närmsta ombud",
-      cardImg: "https://i.ibb.co/60JGC3K/vape.gif",
+      cardImg:
+        "https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_500,h_500/https://www.smoketech.pl/wp-content/uploads/2021/01/smok_stick_v9_max_60w_starter_kit_package_content-1.jpg",
       pris1: "700:-",
       title: "SMOK V9 MAX Kit ",
       type: "original",
@@ -186,7 +187,8 @@ export const getAllData = () => {
       id: 6,
       beställningvara: true,
       fraktInfo: "varan får du inom 5-12 dagar till närmsta ombud",
-      cardImg: "https://i.ibb.co/60JGC3K/vape.gif",
+      cardImg:
+        "https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_500,h_500/https://www.smoketech.pl/wp-content/uploads/2021/01/smok_stick_v9_max_60w_starter_kit_package_content-1.jpg",
       pris1: "700:-",
       title: "SMOK V9 MAX Kit ",
       type: "original",
